@@ -1,0 +1,670 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,900;1,700&display=swap");
+
+
+/* Variables */
+:root {
+  --font-family: "Roboto", sans-serf;
+  --normal-font: 400;
+  --bold-font: 700;
+  --bolder-font: 900;
+  --bg-color: #1f242d;
+  --second-bg-color: #323946;
+  --text-color:#fff;
+  --main-color:#0ef;
+
+  --primary-color: #4756df;
+  --secondary-color: #ff7235;
+  --primary-shadow: #8b8eaf;
+  --secondary-shadow: #a17a69;
+  --bottom-margin: 0.5rem;
+  --bottom-margin-2: 1rem;
+  --line-height: 1.7rem;
+  --transition: 0.3s;
+  
+}
+/* Variables end */
+
+html {
+  font-size: 62.5%;
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* CSS Resets */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+  border: none;
+  outline: none;
+  scroll-behavior: smooth;
+  font-family: var(--font-family);
+}
+body{
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+section {
+  min-height: 100vh;
+  padding: 10rem 9% 2rem;
+}
+
+.header{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 2rem 9%;
+  background-color: var(--second-bg-color);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 100;
+  border-bottom:solid black;
+}
+
+.header.sticky{
+  border-bottom: .1rem solid rgba(0, 0, 0, .2);
+  border-bottom:solid black;
+}
+
+.logo{
+  font-size: 2.5rem;
+  color: var(--text-color);
+  font-weight: 600;
+  cursor: default;
+}
+
+.navbar a {
+  font-size: 1.7rem;
+  color: var(--text-color);
+  margin-left: 4rem;
+  transition: .3s;
+}
+
+.navbar a:hover,
+.navbar a.active{
+  color: var(--main-color);
+}
+
+#menu-icon{
+  font-size: 3.6rem;
+  color: var(--text-color);
+  display: none;
+}
+.home {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* text-align: center; */
+}
+
+.home-content {
+  flex: 1; /* Let the content flex to take available space */
+  padding: 10rem 2rem 2rem;
+  text-align: left;
+}
+
+ .home-img img {
+  width:35vw;
+  animation: floatImage 4s ease-in-out infinite;
+  box-shadow: 0 0 1rem var(--main-color);
+  border-radius: 2rem;
+
+} 
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.home-img {
+  flex: 1; /* Let the image flex to take available space */
+  text-align: center;
+  
+}
+
+.hero-img {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+}
+.home-content h3{
+  font-size: 3.2rem;
+  font-weight:700;
+}
+
+.home-content h3:nth-of-type(2){
+  margin-bottom: 2rem;
+}
+
+span{
+  color: var(--main-color);
+}
+
+.home-content h1{
+  font-size: 5.6rem;
+  font-weight:700;
+  line-height: 1.3
+}
+
+.home-content p{
+  font-size: 1.6rem;
+}
+
+.social-media a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  width: 4rem;
+  height: 4rem;
+  background: transparent;
+  border: .2rem solid var(--main-color);
+  border-radius: 50%;
+  font-size: 2rem;
+  color: var(--main-color);
+  margin: 3rem 1.5rem 3rem 0;
+  transition: .3s;
+}
+
+.social-media a:hover {
+  background: var(--main-color);
+  color: var(--second-bg-color);
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius:4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5 ease;
+  align-items: left;
+}
+
+.btn:hover{
+  box-shadow: none;
+}
+.about {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 2rem;
+  background: var(--second-bg-color)
+}
+
+.about-content{
+  flex: 1; /* Let the content flex to take available space */
+  padding: 10rem 2rem 2rem;
+  text-align: right;
+}
+
+.about-img {
+  width: 35vw; /* Adjust the width as needed */
+  max-width: 100%; /* Ensure the image doesn't exceed its container */
+}
+
+.about-img {
+  flex: 1; /* Let the image flex to take available space */
+  text-align: center;
+}
+.heros-img {
+  max-width: 100%; /* Ensure the image doesn't overflow */
+}
+
+.about-img img {
+  width:35vw;
+  animation: floatImage 4s ease-in-out infinite;
+  box-shadow: 0 0 1rem var(--main-color);
+  border-radius: 2rem;
+
+} 
+
+@keyframes floatImage {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-2.4rem);
+  }
+
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.about-heading{
+  text-align: left;
+  font-size: 4.5rem;
+}
+
+.about-content h2{
+  text-align: left;
+  line-height: 1.2;
+}
+
+.about-content h3{
+  font-size: 2.6rem;
+  text-align: left;
+}
+.about-content p{
+  font-size: 1.6rem;
+  margin: 2rem 0 3rem;
+  text-align: left;
+}
+
+.about-btn-container {
+  text-align: left;
+  margin-top: 2rem; /* Adjust the margin as needed */
+}
+
+.about-btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius:4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: .1rem;
+  font-weight: 600;
+  transition: .5 ease;
+  margin: auto;
+}
+
+.about-btn:hover{
+  box-shadow: none;
+}
+
+.skill-heading{
+  text-align: center;
+  font-size: 4.5rem;
+} 
+.skill-heading h2 {
+  font-size: 4.5rem;
+  margin-bottom: 5rem;
+}
+
+.skill h2 {
+  margin-bottom: 5rem;
+}
+
+
+.skill-container {
+  display: flex; /* Use flex to align skills horizontally */
+  justify-content: center; /* Distribute skills evenly */
+  align-items: center;
+  gap: 2rem; /* Adjust the gap between skills */
+  flex-wrap: wrap; /*Allow skills to wrap to the next row if necessary */
+  /* border: 0.2rem solid var(--main-color); Add border to the skill container */
+  /* border-radius: 50%; */
+  padding: 2rem; /*Add padding to separate the border from skills */
+  /* max-width: calc(25% - 2rem); */
+}
+
+
+.skill-container  .skill-box{
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 2rem;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  max-width: 30rem;
+  transition: .5s ease;
+}
+.skill-container  .skill-box:hover {
+  border-color: var(--main-color);
+  transform: scale(1.02);
+}
+
+
+.skill-box i {
+  font-size: 7rem;
+  color: var(--main-color);
+}
+
+.skill-box h3 {
+  font-size: 2.6rem;
+  margin: 2rem 0 1rem;
+}
+
+.skill-box p {
+  font-size: 1.6rem;
+  margin: 1rem 0 3rem;
+}
+
+.skill-box {
+  flex: 1; /* Allow skills to grow and take equal width */
+  /* max-width: calc(20% - 2rem); Set max-width to make 4 skills fit horizontally */
+  text-align: center;
+  border: 0.2rem solid var(--bg-color); /* Add a border to individual skill boxes */
+  padding: 2rem; /* Add padding to separate the content from the border */
+}
+
+/* .skill-container  .skill-box{
+
+  flex: 1 1 30rem;
+  background: var(--second-bg-color);
+  padding: 3rem 2rem 4rem;
+  border-radius: 50%;
+  text-align: center;
+  border: .2rem solid var(--bg-color);
+  max-width: 30rem;
+  align-items: left;
+} */
+
+.portfolio-heading{
+  text-align: center;
+  font-size: 4.5rem;
+  
+}
+.portfolio{
+  background:var(--second-bg-color) ;
+}
+
+.portfolio h2{
+  margin-bottom:4rem ;
+}
+
+.portfolio-container{
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  align-items: center;
+  gap: 2.5rem;
+}
+
+.portfolio-container .portfolio-box{
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem;
+  overflow:hidden;
+  display: flex;
+}
+
+.portfolio-box {
+  position: relative;
+  border-radius: 2rem;
+  box-shadow: 0 0 1rem;
+  overflow: hidden;
+  display: flex;
+  
+}
+
+.portfolio-box img {
+  max-width: 100%; /* Allow the container to expand to the full width of its parent */
+  height: auto;
+}
+
+.portfolio-box .portfolio-layer {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.7); /* Adjust the background color and opacity */
+  opacity: 0; /* Set default opacity to 0 */
+  transition: opacity 0.3s ease; /* Add transition for opacity */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.portfolio-box:hover .portfolio-layer {
+  opacity: 1; /* Set opacity to 1 on hover */
+  transform: scale(1.1);
+}
+.portfolio-layer h4{
+  font-size: 3.5rem;
+}
+
+.portfolio-layer p{
+  font-size: 1.6rem;
+  margin: .3rem 0 1rem;
+}
+
+.portfolio-layer i {
+  margin: 1rem;
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.contact h2{
+  margin-bottom: 3rem;
+}
+
+.contact form{
+  max-width: 70rem;
+  margin: 0 auto;
+  text-align: left;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+.contact form .input-box{
+  display: flex;
+  justify-self: space-between ;
+  flex: wrap;
+}
+
+.contact-heading{
+  text-align: center;
+  font-size: 4.5rem;
+} 
+
+.contact form .input-box input, 
+.contact form textarea {
+  width: 100%;
+  padding: 1.5rem;
+  font-size: var(--text-color);
+  color: var(--text-color);
+  background: var(--second-bg-color);
+  border-radius: .8rem;
+  margin: .7rem 0;
+}
+
+.contact-container{
+  text-align: center;
+  align-items: center;
+  margin: .7rem 0;
+}
+
+.contact form .input-box {
+  margin: 1;
+}
+
+/* Add this CSS to center the button */
+.btn-container {
+  text-align: center;
+  margin-top: 1rem; /* Adjust the margin as needed */
+}
+
+.contact-btn {
+  display: inline-block;
+  padding: 1rem 2.8rem;
+  background: var(--main-color);
+  border-radius: 4rem;
+  box-shadow: 0 0 1rem var(--main-color);
+  font-size: 1.6rem;
+  color: var(--second-bg-color);
+  letter-spacing: 0.1rem;
+  font-weight: 600;
+  transition: 0.5s ease;
+}
+
+.contact-btn:hover {
+  box-shadow: none;
+}
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  padding: 2rem 9%;
+  background: var(--second-bg-color);  
+}
+.footer-text{
+  font-size: 1.6rem;
+}
+
+.footer-icontop a:hover{
+  box-shadow: 0 0 1rem var(--main-color);
+}
+
+.footer-icontop a {
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: .8rem;
+  background: var(--main-color);
+  border-radius: .8rem;
+  transition: .5s ease;
+}
+.footer-icontop a i{
+  font-size: 2.4rem;
+  color: var(--second-bg-color);
+}
+
+
+/* Media */
+@media (max-width: 1200px) {
+  html{
+    font-size: 55%;
+  }
+}
+
+@media (max-width: 991px) {
+  .header{
+    padding: 2rem 3%;
+
+  }
+
+  section {
+    padding: 10rem 3% 2rem;
+  }
+
+  .skill{
+    padding-bottom: 7rem;
+  }
+  .portfolio {
+    padding-bottom: 7rem;
+  }
+
+  .contact {
+    min-height: auto;
+  }
+  .footer{
+    padding: 2rem 3%;
+  }
+}
+
+
+@media(max-width: 768px){
+  #menu-icon{
+    display:block;
+  }
+  .navbar{
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    padding: 1rem 3%;
+    background: var(--bg-color);
+    border-top: .1rem solid rgba(0, 0, 0, .2);
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .2);
+    display: none;
+  }
+  .navbar.active{
+    display: block;
+  }
+  .navbar a{
+    display: block;
+    font-size: 2rem;
+    margin: 3rem 0;
+  }
+
+  .home {
+    flex-direction: column;
+  }
+
+  .home-content h3{
+    font-size: 2.6rem;
+  }
+  .home-content h1{
+    font-size: 5rem;
+  }
+
+  .home-img img {
+    width:70vw;
+    margin-top: 4rem;
+  }
+
+  .about {
+    flex-direction:  column-reverse;
+  }
+
+  .about img {
+    width:70vw;
+    margin-top: 4rem;
+  }
+
+  .skill h2 {
+  margin-bottom: 3rem;
+  }
+
+  .portfolio h2{
+    margin-bottom: 3rem;
+  }
+  .portfolio-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+
+@media(max-width: 617px){
+  .portfolio-container{
+    grid-template-columns: 1fr;
+  }
+}
+
+@media(max-width: 450px){
+  html {
+    font-size: 50%;
+  }
+
+  .contact form .input-box input{
+    width:100%;
+  }
+}
+
+  @media(max-width: 365px){
+    .home-img img{
+      width: 90vw;
+    }
+    .about-img img{
+      width: 90vw;
+    }
+    .footer {
+      flex-direction: column-reverse;
+    }
+    .footer p {
+      text-align: center;
+      margin-top: 2rem;
+    }
+  }
